@@ -1,13 +1,18 @@
 
-import React from 'react';
-import HomePage from './Components/HomePage'
+import React from 'react'
+import Routes from './Routes';
+
 
 function App() {
   return (
-    <div className="App">
-      <HomePage name="React setup" />
+
+    <div className="App ">
+      <Routes />
     </div>
+
   );
 }
+
+
 
 export default App;
