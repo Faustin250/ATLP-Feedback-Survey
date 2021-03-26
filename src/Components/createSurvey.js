@@ -17,9 +17,7 @@ const dashboard = props => {
 
             <div>
 
-              {/* <Link to="/submit" class="bg-blackColor1 hover:bg-blackColor2 text-white font-normal py-1.5 px-2 rounded w-full ">
-                SUBMIT
-            </Link> */}
+
 
               <Link to="/dashboard/createQuestion">
                 <a className="text-sm text-blackColor1 font-semibold ml-1 hover:">Create Questions</a>
