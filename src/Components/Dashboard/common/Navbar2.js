@@ -6,7 +6,7 @@ const Navbar = props => {
   return (
     <div>
       {/* Navbar */}
-      <nav className="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-no-wrap md:justify-start flex items-center p-4  max-w-full mt-0 ">
+      <nav className="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-no-wrap md:justify-start flex items-center p-4  max-w-full mt-0 bg-pink-600">
         <div className="w-full mx-autp items-center flex justify-between md:flex-no-wrap flex-wrap md:px-10 px-4">
           {/* Brand */}
           <a

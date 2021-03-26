@@ -81,7 +81,7 @@ const SideNavbar = () => {
               <li className="items-center">
                 <Link
                   className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
-                  to="/dashboard/Accomodation"
+                  to="/dashboard/createSurvey"
                 >
                   <i className="fas fa-poll text-gray-500 mr-2 text-sm"></i> create survey
                 </Link>

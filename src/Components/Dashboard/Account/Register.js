@@ -1,8 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import googleIcon from '../../../assets/images/icons8-google.svg'
+import googleIcon from '../../../assets/images/icons8-google.svg';
+import firebase from "../../../firebase/config";
+import { Auth } from "../../../context/authContext";
+import { Redirect } from "react-router-dom";
 
 const Register = () => {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [routeRedirect, setRouteRedirect] = useState(false);
+  const { state, dispatch } = React.useContext(Auth);
+
+
+  const signup = async (e) => {
+
+    console.log(state);
+    e.preventDefault();
+    let response = await firebase.signup(email, password);
+
+    if (response.hasOwnProperty("message")) {
+      console.log(response.message);
+    } else {
+      console.log(response.user);
+      setRouteRedirect(true);
+      return dispatch({
+        type: "SIGNIN",
+        payload: response.user
+      })
+    }
+  }
+
+  const redirect = routeRedirect;
+  if (redirect) {
+    return <Redirect to="/dashboard/login" />
+  }
+
   return (
 
     <div className="flex justify-center items-center flex-col">
@@ -11,35 +44,33 @@ const Register = () => {
         <div className=" flex justify-center items-center flex-col p-4">
           <h1 className="text-textColor-900 font-medium font-sans text-xl">Sign Up</h1>
 
-          <form className="w-full mt-3">
+          <form className="w-full mt-3" onSubmit={signup}>
 
             <div class="mb-1">
 
-              <label class=" text-textColor-900 font-medium font-sans text-xs">Username
+              <label class=" text-textColor-900 font-medium font-sans text-xs" htmlFor="email">Email
               </label>
               <br />
-              <input type="text" class="border-2 border-gray-300 focus:outline-none focus:border-blackColor2 rounded  py-2 px-2 w-full text-textColor-900 font-normal font-sans text-xs" name="title" id="title" placeholder="Username">
-
+              <input class="border-2 border-gray-300 focus:outline-none focus:border-blackColor2 rounded  py-2 px-2 w-full text-textColor-900 font-normal font-sans text-xs" placeholder="Username"
+                type="email" name="email" onChange={(e) => setEmail(e.target.value)}
+              >
               </input>
             </div>
 
             <div class="mb-1">
-              <label class=" text-textColor-900 font-medium font-sans text-xs">Email
+              <label class=" text-textColor-900 font-medium font-sans text-xs" htmlFor="password">Password
               </label>
               <br />
-              <input type="text" class="border-2 border-gray-300 focus:outline-none focus:border-blackColor2 rounded  py-2 px-2 w-full text-textColor-900 font-normal font-sans text-xs" name="title" id="title" placeholder="Email">
-              </input>
-            </div>
-            <div class="mb-1">
-              <label class=" text-textColor-900 font-medium font-sans text-xs">Password
-              </label>
-              <br />
-              <input type="text" class="border-2 border-gray-300 focus:outline-none focus:border-blackColor2 rounded  py-2 px-2 w-full text-textColor-900 font-normal font-sans text-xs" name="title" id="title" placeholder="Password">
+              <input class="border-2 border-gray-300 focus:outline-none focus:border-blackColor2 rounded  py-2 px-2 w-full text-textColor-900 font-normal font-sans text-xs" placeholder="Password"
+                type="password" onChange={(e) => setPassword(e.target.value)}
+              >
               </input>
             </div>
 
             <div className="flex justify-center mt-5 w-full">
-              <button class="bg-blackColor1 hover:bg-blackColor2 text-white font-normal py-1.5 px-2 rounded w-full ">
+              <button class="bg-blackColor1 hover:bg-blackColor2 text-white font-normal py-1.5 px-2 rounded w-full "
+                type="submit" value="Create account"
+              >
                 Sign Up
 
               </button>

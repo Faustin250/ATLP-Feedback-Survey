@@ -1,9 +1,42 @@
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Popper from "popper.js";
 import Image from "../../../assets/images/pic.jpg"
 
-const UserDropdown = () => {
+import { Redirect, Link, withRouter } from "react-router-dom";
+import firebase from "../../../firebase/config";
+import { Auth } from "../../../context/authContext";
+
+const UserDropdown = (props) => {
+
+  const [userState, setUserState] = useState(null);
+  const [userEmail, setUserEmail] = useState("");
+
+  const { state, dispatch } = React.useContext(Auth);
+
+  useEffect(() => {
+    firebase.getUserState().then(user => {
+      if (user) {
+        setUserState(user);
+        setUserEmail(user.email);
+
+      }
+    });
+  });
+
+
+
+  const logout = () => {
+    firebase.logout();
+    setUserState(null);
+    props.history.replace("/dashboard/login");
+    return dispatch({
+      type: "LOGOUT",
+      payload: {}
+    });
+  }
+
+
+
   // dropdown props
   const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
   const btnDropdownRef = React.createRef();
@@ -17,6 +50,12 @@ const UserDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
+
+
+  // if (userState === null) {
+  //   return <Redirect to='/' />
+  // }
+
   return (
     <>
       <a
@@ -65,18 +104,23 @@ const UserDropdown = () => {
           Settings
         </a>
         <div className="h-0 my-2 border border-solid border-gray-200" />
+
+
         <a
           href="#pablo"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
           }
-          onClick={e => e.preventDefault()}
+          onClick={logout}
         >
           Logout
         </a>
+
+
+
       </div>
     </>
   );
 };
 
-export default UserDropdown;
+export default withRouter(UserDropdown);

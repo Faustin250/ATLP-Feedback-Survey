@@ -1,14 +1,16 @@
 import React from 'react'
 import image from './../assets/images/pic.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
 
     <div className="flex justify-center items-center flex-col">
+      <h1 className="text-textColor-900 font-medium font-sans text-2xl mt-5 mb-5">ATLP Feedback Survey</h1>
       <div className="header flex justify-center items-left flex-col p-3 shadow w-11/12   sm:w-10/12 md:w-9/12 lg:w-6/12 bg-cool-back-color">
         <div className=" flex justify-center items-center flex-col pt-4">
-          <h1 className="text-textColor-900 font-medium font-sans text-xl">ATLP Feedback Survey</h1>
+          
           <p className="text-textColor-900 font-medium text-center font-sans text-sm pt-1" >We are working hard to make the next ATLP better. We would like to ask you to share your experience with us. Your answers will help us understand what we need to improve</p>
         </div>
 
@@ -96,150 +98,17 @@ const HomePage = () => {
 
           </div>
 
-          <div className="pt-2">
-            <li className="text-textColor-900 font-normal font-sans text-xs"> 
-           How does TTL helped you accomplish the task assigned to you
-            </li>
-            <div className="flex justify-center items-left flex-col pt-1">
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                TTL gave me resources and guidance I needed to accomplish your task
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                
-             TTL gave me resources but he didn't gave guidance that could help me accomplish my
-             task
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                
-               TTL gaved me resources and explanation but I had to do research on my own
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                TTL didn't give me resources nor any guidance. I was kind alone
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <div className="pt-2">
-            <li className="text-textColor-900 font-normal font-sans text-xs"> 
-           How does TTL helped you accomplish the task assigned to you
-            </li>
-            <div className="flex justify-center items-left flex-col pt-1">
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                TTL gave me resources and guidance I needed to accomplish your task
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                
-             TTL gave me resources but he didn't gave guidance that could help me accomplish my
-             task
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                
-               TTL gaved me resources and explanation but I had to do research on my own
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                TTL didn't give me resources nor any guidance. I was kind alone
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <div className="pt-2">
-            <li className="text-textColor-900 font-normal font-sans text-xs"> 
-           How does TTL helped you accomplish the task assigned to you
-            </li>
-            <div className="flex justify-center items-left flex-col pt-1">
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                TTL gave me resources and guidance I needed to accomplish your task
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                
-             TTL gave me resources but he didn't gave guidance that could help me accomplish my
-             task
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                
-               TTL gaved me resources and explanation but I had to do research on my own
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                TTL didn't give me resources nor any guidance. I was kind alone
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <div className="pt-2">
-            <li className="text-textColor-900 font-normal font-sans text-xs"> 
-           How does TTL helped you accomplish the task assigned to you
-            </li>
-            <div className="flex justify-center items-left flex-col pt-1">
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                TTL gave me resources and guidance I needed to accomplish your task
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                
-             TTL gave me resources but he didn't gave guidance that could help me accomplish my
-             task
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                
-               TTL gaved me resources and explanation but I had to do research on my own
-                </span>
-              </label>
-              <label class="inline-flex items-center">
-                <input type="radio" class="form-radio" name="accountType3" value="personal" />
-                <span class="ml-2 text-textColor-900 font-normal font-sans text-xs">
-                TTL didn't give me resources nor any guidance. I was kind alone
-                </span>
-              </label>
-            </div>
-          </div>
+          
         </ul>
        
         <div className="flex justify-center mt-5 w-11/12 sm:justify-end">
           <button class="bg-blackColor1 hover:bg-blackColor2 text-white font-normal py-1 px-2 rounded w-9/12 sm:w-1/4 ">
-            SUBMIT
+            <Link to="/submit">
+              SUBMIT
+            </Link>
+            
+           
+                
          </button>
        </div>
 
