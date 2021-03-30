@@ -8,7 +8,7 @@ import HomePage from './Components/HomePage'
 import SubmitPage from './Components/SubmitPage'
 import Login from './Components/Dashboard/Account/login'
 import Register from './Components/Dashboard/Account/Register'
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
 function index() {

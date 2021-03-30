@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import firebase from "../../../firebase/config";
 import { Auth } from "../../../context/authContext";
-import { Redirect, withRouter } from "react-router-dom";
+import { Redirect, } from "react-router-dom";
 
 import googleIcon from '../../../assets/images/icons8-google.svg'
 
@@ -12,7 +12,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [routeRedirect, setRouteRedirect] = useState(false);
 
-  const { state, dispatch } = React.useContext(Auth);
+  const { dispatch } = React.useContext(Auth);
 
   const login = async (e) => {
     e.preventDefault();
@@ -38,9 +38,6 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center flex-col">
       <h1 className="text-textColor-900 font-medium font-sans text-2xl mt-5 mb-5">ATLP Feedback Survey</h1>
-
-
-
 
       <div className="header flex justify-center items-left flex-col  shadow w-11/12   sm:w-10/12 md:w-9/12 lg:w-2/6 bg-cool-back-color rounded">
 
@@ -86,7 +83,7 @@ const Login = () => {
             <div className="flex justify-center mt-3">
               <p className="text-sm text-blackColor1 font-medium">Don't have an account?</p>
               <Link to="/dashboard/register">
-                <a className="text-sm text-blackColor1 font-semibold ml-1 hover:">Sign up</a>
+                <button className="text-sm text-blackColor1 font-semibold ml-1 hover:">Sign up</button>
               </Link>
             </div>
 

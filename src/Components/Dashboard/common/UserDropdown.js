@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Popper from "popper.js";
 import Image from "../../../assets/images/pic.jpg"
 
-import { Redirect, Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import firebase from "../../../firebase/config";
 import { Auth } from "../../../context/authContext";
 
 const UserDropdown = (props) => {
 
-  const [userState, setUserState] = useState(null);
-  const [userEmail, setUserEmail] = useState("");
+  // const [userState, setUserState] = useState(null);
+  // const [userEmail, setUserEmail] = useState("");
 
-  const { state, dispatch } = React.useContext(Auth);
+  const { dispatch } = React.useContext(Auth);
 
-  useEffect(() => {
-    firebase.getUserState().then(user => {
-      if (user) {
-        setUserState(user);
-        setUserEmail(user.email);
+  // useEffect(() => {
+  //   firebase.getUserState().then(user => {
+  //     if (user) {
+  //       setUserState(user);
+  //       setUserEmail(user.email);
 
-      }
-    });
-  });
+  //     }
+  //   });
+  // });
 
 
 
   const logout = () => {
     firebase.logout();
-    setUserState(null);
+    // setUserState(null);
     props.history.replace("/dashboard/login");
     return dispatch({
       type: "LOGOUT",

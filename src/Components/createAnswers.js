@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import AnswersComp from './AnswersComp'
 import Navbar2 from './Dashboard/common/Navbar2'
 import SideNavbar from './Dashboard/common/SideNavbar'
@@ -21,10 +20,10 @@ const dashboard = props => {
 
             <div>
               <Link to="/dashboard/createQuestion">
-                <a className="text-sm text-blackColor1 font-semibold ml-1 border-2 border-blackColor1 hover:border-blackColor2 p-1 hover:text-pink-600 rounded">CREATE QUESTION</a>
+                <button className="text-sm text-blackColor1 font-semibold ml-1 border-2 border-blackColor1 hover:border-blackColor2 p-1 hover:text-pink-600 rounded">CREATE QUESTION</button>
               </Link>
               <Link to="/dashboard/createAnswer">
-                <a className="text-sm text-blackColor1 font-semibold ml-1  border-2 border-blackColor1 hover:border-blackColor2 p-1 hover:text-pink-600 rounded ml-2">CREATE ANSWERS</a>
+                <button className="text-sm text-blackColor1 font-semibold ml-1  border-2 border-blackColor1 hover:border-blackColor2 p-1 hover:text-pink-600 rounded ml-2">CREATE ANSWERS</button>
               </Link>
             </div>
 
@@ -39,8 +38,5 @@ const dashboard = props => {
   )
 }
 
-dashboard.propTypes = {
-
-}
 
 export default dashboard

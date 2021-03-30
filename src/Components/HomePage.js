@@ -1,6 +1,6 @@
 import React from 'react'
-import image from './../assets/images/pic.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import image from './../assets/images/pic.jpg'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "react-router-dom";
 
 const HomePage = () => {

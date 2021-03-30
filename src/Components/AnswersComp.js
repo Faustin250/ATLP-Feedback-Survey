@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 
 const createQuestion = props => {
   return (
@@ -70,8 +70,5 @@ const createQuestion = props => {
   )
 }
 
-createQuestion.propTypes = {
-
-}
 
 export default createQuestion
