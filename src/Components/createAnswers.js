@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CreateQuestion from './createQuestion'
+import AnswersComp from './AnswersComp'
 import Navbar2 from './Dashboard/common/Navbar2'
 import SideNavbar from './Dashboard/common/SideNavbar'
 
@@ -28,7 +28,7 @@ const dashboard = props => {
               </Link>
             </div>
 
-            <CreateQuestion />
+            <AnswersComp />
 
           </div>
         </div>

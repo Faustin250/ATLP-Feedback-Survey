@@ -11,7 +11,9 @@ module.exports = {
         'cool-back-color': '#F8F8F8',
         'textColor': '#000',
         'blackColor1': '#333333',
-        'blackColor2': '#555555'
+        'blackColor2': '#555555',
+        'colorCool': '#DB2777'
+
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

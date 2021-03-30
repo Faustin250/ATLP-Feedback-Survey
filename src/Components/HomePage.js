@@ -106,8 +106,6 @@ const HomePage = () => {
             <Link to="/submit">
               SUBMIT
             </Link>
-            
-           
                 
          </button>
        </div>
